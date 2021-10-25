@@ -1,7 +1,7 @@
 {
   "name": "rubick-cli",
   "description": "rubick cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "rubick",
   "bin": {
     "rubick": "./bin/run"
