@@ -10,12 +10,15 @@ specifiers:
   '@oclif/plugin-warn-if-update-available': ^1.7.0
   '@oclif/test': ^1
   '@types/chai': ^4
+  '@types/fs-extra': ^9.0.13
+  '@types/inquirer': ^8.1.3
   '@types/mocha': ^9
   '@types/node': ^16
   chai: ^4
   eslint: ^8.1
   eslint-config-oclif: ^4.0
   eslint-config-oclif-typescript: ^1.0
+  fs-extra: ^10.0.0
   globby: ^11
   mocha: ^9
   nyc: ^15
@@ -30,6 +33,9 @@ dependencies:
   '@oclif/plugin-help': registry.npmmirror.com/@oclif/plugin-help/3.2.3
   '@oclif/plugin-not-found': registry.npmmirror.com/@oclif/plugin-not-found/1.2.4
   '@oclif/plugin-warn-if-update-available': registry.npmmirror.com/@oclif/plugin-warn-if-update-available/1.7.0
+  '@types/fs-extra': registry.nlark.com/@types/fs-extra/9.0.13
+  '@types/inquirer': registry.npmmirror.com/@types/inquirer/8.1.3
+  fs-extra: registry.nlark.com/fs-extra/10.0.0
   tslib: registry.nlark.com/tslib/2.3.1
 
 devDependencies:
@@ -409,6 +415,14 @@ packages:
     version: 1.0.2
     dev: true
 
+  registry.nlark.com/@types/fs-extra/9.0.13:
+    resolution: {integrity: sha1-dZT7rgT+fxkYzos9IT90/0SsH0U=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/fs-extra/download/@types/fs-extra-9.0.13.tgz}
+    name: '@types/fs-extra'
+    version: 9.0.13
+    dependencies:
+      '@types/node': registry.npmmirror.com/@types/node/16.11.4
+    dev: false
+
   registry.nlark.com/@types/json-schema/7.0.9:
     resolution: {integrity: sha1-l+3JA36gw4WFMgsolk3eOznkZg0=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/json-schema/download/@types/json-schema-7.0.9.tgz}
     name: '@types/json-schema'
@@ -426,6 +440,14 @@ packages:
     name: '@types/normalize-package-data'
     version: 2.4.1
     dev: true
+
+  registry.nlark.com/@types/through/0.0.30:
+    resolution: {integrity: sha1-4OQs536Je9aurW9upirrE1uKOJU=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/@types/through/download/@types/through-0.0.30.tgz}
+    name: '@types/through'
+    version: 0.0.30
+    dependencies:
+      '@types/node': registry.npmmirror.com/@types/node/16.11.4
+    dev: false
 
   registry.nlark.com/acorn-jsx/5.3.2_acorn@8.5.0:
     resolution: {integrity: sha1-ftW7VZCLOy8bxVxq8WU7rafweTc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/acorn-jsx/download/acorn-jsx-5.3.2.tgz}
@@ -1334,6 +1356,17 @@ packages:
     name: fs-constants
     version: 1.0.0
     dev: true
+
+  registry.nlark.com/fs-extra/10.0.0:
+    resolution: {integrity: sha1-n/YbZV3eU/s0qC34S7IUzoAuF8E=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs-extra/download/fs-extra-10.0.0.tgz}
+    name: fs-extra
+    version: 10.0.0
+    engines: {node: '>=12'}
+    dependencies:
+      graceful-fs: registry.nlark.com/graceful-fs/4.2.8
+      jsonfile: registry.nlark.com/jsonfile/6.1.0
+      universalify: registry.nlark.com/universalify/2.0.0
+    dev: false
 
   registry.nlark.com/fs-extra/6.0.1:
     resolution: {integrity: sha1-irwSj3lG4xATXdyTuYvdtBDno0s=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fs-extra/download/fs-extra-6.0.1.tgz}
@@ -2757,6 +2790,12 @@ packages:
     name: tslib
     version: 1.14.1
 
+  registry.nlark.com/tslib/2.1.0:
+    resolution: {integrity: sha1-2mCGDxwuyqVwOrfTm8Bba/mIuXo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/tslib/download/tslib-2.1.0.tgz?cache=0&sync_timestamp=1631509536944&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.1.0.tgz}
+    name: tslib
+    version: 2.1.0
+    dev: false
+
   registry.nlark.com/tslib/2.3.1:
     resolution: {integrity: sha1-6KM1rdXOrlGqJh0ypJAVjvBC7wE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/tslib/download/tslib-2.3.1.tgz?cache=0&sync_timestamp=1631509536944&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ftslib%2Fdownload%2Ftslib-2.3.1.tgz}
     name: tslib
@@ -3288,6 +3327,15 @@ packages:
       '@types/node': registry.npmmirror.com/@types/node/16.11.4
     dev: true
 
+  registry.npmmirror.com/@types/inquirer/8.1.3:
+    resolution: {integrity: sha1-39pMl82+ME5NzrN4qA95RI6lyP4=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/inquirer/download/@types/inquirer-8.1.3.tgz}
+    name: '@types/inquirer'
+    version: 8.1.3
+    dependencies:
+      '@types/through': registry.nlark.com/@types/through/0.0.30
+      rxjs: registry.npmmirror.com/rxjs/7.4.0
+    dev: false
+
   registry.npmmirror.com/@types/lodash/4.14.176:
     resolution: {integrity: sha1-ZBFQ/BzaNvv6Mp3mA7uxddfuIMA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/lodash/download/@types/lodash-4.14.176.tgz}
     name: '@types/lodash'
@@ -3310,7 +3358,6 @@ packages:
     resolution: {integrity: sha1-kHcRJIItZmOBT3wcm0WmZU2P2WQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/download/@types/node-16.11.4.tgz}
     name: '@types/node'
     version: 16.11.4
-    dev: true
 
   registry.npmmirror.com/@types/sinon/10.0.4:
     resolution: {integrity: sha1-kzJSdmVpK59oJq/gF/NCo6xhIPQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/sinon/download/@types/sinon-10.0.4.tgz}
@@ -4157,6 +4204,14 @@ packages:
     dependencies:
       picomatch: registry.nlark.com/picomatch/2.3.0
     dev: true
+
+  registry.npmmirror.com/rxjs/7.4.0:
+    resolution: {integrity: sha1-oSpE1+6/AW9f8kQbh/KMmlHOvGg=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/rxjs/download/rxjs-7.4.0.tgz}
+    name: rxjs
+    version: 7.4.0
+    dependencies:
+      tslib: registry.nlark.com/tslib/2.1.0
+    dev: false
 
   registry.npmmirror.com/signal-exit/3.0.5:
     resolution: {integrity: sha1-nj6MwMdamUcrRDIQM6dwLnc4JS8=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/signal-exit/download/signal-exit-3.0.5.tgz?cache=0&sync_timestamp=1632966083195&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fsignal-exit%2Fdownload%2Fsignal-exit-3.0.5.tgz}
