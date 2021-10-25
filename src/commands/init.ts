@@ -82,7 +82,7 @@ const adapterInit = async (projectPath: string) => {
     scripts: {
       build: "tsc",
     },
-    files: ["dist"],
+    files: ["dist", "plugin.json"],
   };
 
   const tsconfigJSON = {
