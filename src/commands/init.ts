@@ -46,11 +46,13 @@ hello world from ./src/hello.ts!
 
     switch (responses.type) {
       case "系统插件(Adapter)":
+        cli.styledHeader("🧭 系统插件是为 rubick 提供底层能力的插件拓展  \n");
         await adapterInit(projectPath);
         break;
 
       default:
         cli.log(`${responses.type} 现在还未支持哦`);
+        cli.exit();
         break;
     }
   }
@@ -67,12 +69,12 @@ const adapterInit = async (projectPath: string) => {
     main: "src/index.ts",
     version: "0.0.0",
     logo: "logo.png",
-    name: await cli.prompt("插件仓库名称"),
+    name: `rubick-adapter-${pluginName}`,
     features: [],
   };
 
   const packageJSON = {
-    name: pluginName,
+    name: `rubick-adapter-${pluginName}`,
     description: "rubick cli",
     version: "0.0.0",
     author,
