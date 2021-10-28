@@ -70,7 +70,7 @@ const adapterInit = async (projectPath: string) => {
     version: "0.0.0",
     logo: "logo.png",
     name: `rubick-adapter-${pluginName}`,
-    features: [],
+    type: "adapter",
   };
 
   const packageJSON = {
