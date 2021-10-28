@@ -6,7 +6,7 @@
 
 `npm install rubick-cli -g` && `pnpm i -g rubick-cli`
 
-## 用法
+## 使用
 
 1. 创建一个插件项目
 
